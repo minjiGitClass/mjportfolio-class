@@ -74,21 +74,41 @@
         <div class="project-grid">
           <article class="project-card project-indigo reveal">
             <div class="project-meta"><span>01 — PRODUCT DESIGN</span><span>2024</span></div>
-            <div class="project-art orbit-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core">N</div></div>
-            <div class="project-info"><h3>Nova Finance</h3><p>금융을 처음 만나는 사람들을 위한 투자 경험 리디자인</p><a href="#contact" aria-label="Nova Finance 프로젝트 문의">케이스 스터디 <span>↗</span></a></div>
+            <div class="project-art orbit-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core">L</div></div>
+            <div class="project-info"><h3>Lumio</h3><p>예시 프로젝트 설명: 일상의 금융 경험을 더 쉽게 만드는 서비스</p><span class="project-card-link">케이스 스터디 <span>↗</span></span></div>
+            <button class="project-card-trigger" type="button" data-project="lumio" aria-haspopup="dialog" aria-label="Lumio 프로젝트 상세 정보 보기"></button>
           </article>
           <article class="project-card project-orange reveal">
             <div class="project-meta"><span>02 — BRAND &amp; WEB</span><span>2023</span></div>
-            <div class="project-art blocks-art"><div class="block block-a"></div><div class="block block-b"></div><div class="block block-c"></div><span>MOVE<br />BETTER</span></div>
-            <div class="project-info"><h3>Layer Studio</h3><p>공간의 가치를 새롭게 정의한 브랜드 아이덴티티</p><a href="#contact" aria-label="Layer Studio 프로젝트 문의">케이스 스터디 <span>↗</span></a></div>
+            <div class="project-art blocks-art"><div class="block block-a"></div><div class="block block-b"></div><div class="block block-c"></div><span>MORI<br />DAILY</span></div>
+            <div class="project-info"><h3>Mori</h3><p>예시 프로젝트 설명: 매일의 루틴을 돕는 라이프스타일 브랜드</p><span class="project-card-link">케이스 스터디 <span>↗</span></span></div>
+            <button class="project-card-trigger" type="button" data-project="mori" aria-haspopup="dialog" aria-label="Mori 프로젝트 상세 정보 보기"></button>
           </article>
           <article class="project-card project-green reveal">
             <div class="project-meta"><span>03 — UX STRATEGY</span><span>2022</span></div>
-            <div class="project-art type-art"><span>아직<br /><i>없던</i><br /><b>여행.</b></span><div class="type-sun"></div></div>
-            <div class="project-info"><h3>Wanderly</h3><p>계획부터 기록까지, 여행의 모든 장면을 하나로</p><a href="#contact" aria-label="Wanderly 프로젝트 문의">케이스 스터디 <span>↗</span></a></div>
+            <div class="project-art type-art"><span>브랜드<br /><i>경험</i><br /><b>온도.</b></span><div class="type-sun"></div></div>
+            <div class="project-info"><h3>Ondo Studio</h3><p>예시 프로젝트 설명: 따뜻한 감성을 담은 스튜디오 웹사이트</p><span class="project-card-link">케이스 스터디 <span>↗</span></span></div>
+            <button class="project-card-trigger" type="button" data-project="ondo-studio" aria-haspopup="dialog" aria-label="Ondo Studio 프로젝트 상세 정보 보기"></button>
           </article>
         </div>
       </section>
+
+      <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+        <div class="project-modal-content">
+          <div class="project-modal-header">
+            <p class="eyebrow">PROJECT DETAILS</p>
+            <button class="project-modal-close" type="button" aria-label="프로젝트 상세 정보 닫기">닫기 <span aria-hidden="true">×</span></button>
+          </div>
+          <p class="project-example-note">아래 내용은 기능 시연을 위한 예시이며 실제 프로젝트 정보가 아닙니다.</p>
+          <h2 id="project-modal-title"></h2>
+          <p class="project-modal-description" id="project-modal-description"></p>
+          <dl class="project-modal-details">
+            <div><dt>담당 역할</dt><dd id="project-modal-role"></dd></div>
+            <div><dt>사용 기술</dt><dd id="project-modal-technologies"></dd></div>
+            <div><dt>주요 성과</dt><dd id="project-modal-achievement"></dd></div>
+          </dl>
+        </div>
+      </dialog>
 
       <section class="contact-section container reveal" id="contact">
         <div class="contact-copy">
