@@ -66,3 +66,79 @@ body{font-size:17px}
   .project-modal-content{padding:24px 20px}
   .project-modal-description,.project-modal-details dd{font-size:13px}
 }
+
+:root{
+  color-scheme:light;
+  --surface:#fff;
+  --logo-bg:var(--ink);
+  --logo-fg:var(--lime);
+  --button-bg:#20232b;
+  --button-fg:#fff;
+  --success:#568d48;
+  --field-line:#aeb0b5;
+  --card-indigo:#dad9ff;
+  --card-orange:#ffd2bb;
+  --card-green:#d6efd9;
+  --project-meta:#53545d;
+  --project-description:#696a70;
+  --project-divider:#20232b35;
+  --modal-note-bg:#eeedff;
+  --modal-note-fg:#4941bf;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ink:#f2f1ed;
+  --muted:#a9abb3;
+  --line:#363941;
+  --paper:#17191e;
+  --surface:#22252c;
+  --logo-bg:#f2f1ed;
+  --logo-fg:#20232b;
+  --button-bg:var(--lime);
+  --button-fg:#20232b;
+  --success:#9ed18c;
+  --field-line:#737781;
+  --card-indigo:#302f50;
+  --card-orange:#493128;
+  --card-green:#263b30;
+  --project-meta:#dedde8;
+  --project-description:#d0ced6;
+  --project-divider:#ffffff3d;
+  --modal-note-bg:#302f50;
+  --modal-note-fg:#cbc6ff;
+}
+.theme-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--surface);
+  color:var(--ink);
+  font:600 12px "Manrope","Noto Sans KR",sans-serif;
+  cursor:pointer;
+  transition:background .2s,color .2s,border-color .2s;
+}
+.theme-toggle:hover{border-color:var(--muted)}
+.theme-toggle:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+.theme-toggle-icon{font-size:16px;line-height:1}
+.logo span{background:var(--logo-bg);color:var(--logo-fg)}
+.button-primary{background:var(--button-bg);color:var(--button-fg)}
+.button-primary span{color:var(--button-fg)}
+.floating-note{background:var(--surface);color:var(--ink)}
+.project-indigo{background:var(--card-indigo)}
+.project-orange{background:var(--card-orange)}
+.project-green{background:var(--card-green)}
+.project-meta{color:var(--project-meta)}
+.project-info p{color:var(--project-description)}
+.project-info .project-card-link{border-top-color:var(--project-divider)}
+.nav-links{background:var(--surface)}
+.contact-form input,.contact-form textarea{border-bottom-color:var(--field-line);color:var(--ink)}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted)}
+.project-example-note{background:var(--modal-note-bg);color:var(--modal-note-fg)}
+.project-modal-close{color:var(--ink)}
+.form-status{color:var(--success)}
+@media(max-width:800px){
+  .theme-toggle{margin-left:auto}
+}

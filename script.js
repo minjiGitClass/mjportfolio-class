@@ -1,3 +1,38 @@
+const themeToggle = document.querySelector(".theme-toggle");
+let savedTheme = null;
+
+try {
+  savedTheme = localStorage.getItem("theme");
+} catch (error) {
+  console.error("저장된 테마를 불러오지 못했습니다.", error);
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+  document.documentElement.dataset.theme = isDark ? "dark" : "light";
+  themeToggle.setAttribute(
+    "aria-label",
+    `${isDark ? "라이트" : "다크"} 모드로 전환`
+  );
+  themeToggle.querySelector(".theme-toggle-icon").textContent = isDark ? "☀" : "☾";
+  themeToggle.querySelector(".theme-toggle-label").textContent = isDark
+    ? "라이트 모드"
+    : "다크 모드";
+}
+
+applyTheme(savedTheme === "dark" ? "dark" : "light");
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  applyTheme(nextTheme);
+
+  try {
+    localStorage.setItem("theme", nextTheme);
+  } catch (error) {
+    console.error("테마 설정을 저장하지 못했습니다.", error);
+  }
+});
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
